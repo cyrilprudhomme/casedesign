@@ -1,0 +1,46 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>CASEDESIGN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header class="ion-no-border" collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">CASEDESIGN</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-align-items-center"
+             style="height:400px; background: center no-repeat url('https://casedesign.fr/content/images/size/w2000/2024/04/salon-sejour5--1--1.jpeg');">
+      <ion-col class="ion-text-center" size="12" size-sm="8">
+        <ion-text>
+          <h1 style="color: white">VOTRE ESPACE, MON EXPERTISE,VOTRE STYLE</h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-align-items-center" size="12" size-sm="8">
+        <h2>Derniers Articles</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col *ngFor="let offer of offers" size="12" size-sm="4">
+        <ion-card style="min-height: 100%">
+          <!--          <img alt="Silhouette of mountains" src="{{offer.image_url}}"/>-->
+          <ion-card-header color="primary" style="min-height: 120px">
+            <ion-card-title>{{ offer.title }}</ion-card-title>
+            <ion-card-subtitle>{{ offer.subtitle }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            {{ offer.body }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<app-footer></app-footer>
