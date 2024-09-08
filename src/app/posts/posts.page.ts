@@ -4,7 +4,6 @@ import {FormsModule} from '@angular/forms';
 import {
   IonButtons,
   IonCard,
-  IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
@@ -13,9 +12,8 @@ import {
   IonGrid,
   IonHeader,
   IonMenuButton,
-  IonRouterLink,
+  IonNav,
   IonRow,
-  IonText,
   IonTitle,
   IonToolbar
 } from '@ionic/angular/standalone';
@@ -24,17 +22,17 @@ import {ApiService} from "../api.service";
 import {RouterLink} from "@angular/router";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-posts',
+  templateUrl: './posts.page.html',
+  styleUrls: ['./posts.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, FooterComponent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonText, IonRouterLink, RouterLink]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonNav, FooterComponent, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonMenuButton, IonRow, RouterLink]
 })
-export class HomePage implements OnInit {
+export class PostsPage implements OnInit {
   private apiService = inject(ApiService);
   posts = this.apiService.posts
-  constructor() {
 
+  constructor() {
   }
 
   ngOnInit() {

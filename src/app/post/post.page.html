@@ -1,0 +1,49 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" default-href="/posts" text="Retour"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">CASEDESIGN</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header class="ion-no-border" collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button color="primary" text="Retour"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">CASEDESIGN</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col class="ion-text-center" size="12" size-sm="8">
+        <ion-text>
+          <h1>{{ post().title }}</h1>
+          <h2>{{ post().subtitle }}</h2>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-sm="8">
+        @if (post().images) {
+          <ngb-carousel>
+            @for (image of post().images; track $index) {
+              <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                  <img [src]="image.url" alt="{{ image.description }}"/>
+                </div>
+                <div class="carousel-caption">
+                  <h3>{{ image.title }}</h3>
+                  <p>{{ image.subtitle }}</p>
+                </div>
+              </ng-template>
+            }
+          </ngb-carousel>
+        }
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

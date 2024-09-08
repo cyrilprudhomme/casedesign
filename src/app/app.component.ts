@@ -27,7 +27,9 @@ import {
   homeSharp,
   logoInstagram,
   mailOpenOutline,
-  mailOpenSharp
+  mailOpenSharp,
+  pricetagsOutline,
+  pricetagsSharp
 } from 'ionicons/icons';
 
 @Component({
@@ -40,8 +42,9 @@ import {
 export class AppComponent {
   public appPages = [
     {title: 'Accueil', url: '/home', icon: 'home'},
+    {title: 'Posts', url: '/posts', icon: 'albums'},
     {title: 'Qui suis-je ?', url: '/me', icon: 'help'},
-    {title: 'Mes offres', url: '/offers', icon: 'albums'},
+    {title: 'Mes offres', url: '/offers', icon: 'pricetags'},
     {title: 'Contact', url: '/contact', icon: 'mail-open'},
   ];
   public labels = [{title: 'Instagram', icon: 'logo-instagram'}];
@@ -53,6 +56,8 @@ export class AppComponent {
       homeSharp,
       helpOutline,
       helpSharp,
+      pricetagsOutline,
+      pricetagsSharp,
       albumsOutline,
       albumsSharp,
       mailOpenOutline,
