@@ -17,22 +17,25 @@ import {
   IonItem,
   IonList,
   IonMenuButton,
+  IonRouterLink,
   IonRow,
   IonText,
   IonTitle,
   IonToolbar
 } from '@ionic/angular/standalone';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {NgbCarousel, NgbSlide} from "@ng-bootstrap/ng-bootstrap";
-import {ApiService} from "../api.service";
+import {ApiService} from "../services/api.service";
 import {albums} from "ionicons/icons";
+import {appPages} from "../services/reference";
+import {ToolbarComponent} from "../components/toolbar/toolbar.component";
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.page.html',
   styleUrls: ['./post.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, NgbCarousel, NgbSlide, IonBackButton, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol, IonGrid, IonInput, IonItem, IonList, IonRow, IonText]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, NgbCarousel, NgbSlide, IonBackButton, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol, IonGrid, IonInput, IonItem, IonList, IonRow, IonText, IonRouterLink, RouterLink, ToolbarComponent]
 })
 export class PostPage implements OnInit {
   public folder!: string;
@@ -48,4 +51,6 @@ export class PostPage implements OnInit {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
     this.apiService.getPost(this.folder)
   }
+
+  protected readonly appPages = appPages;
 }

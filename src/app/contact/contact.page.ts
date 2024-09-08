@@ -17,18 +17,22 @@ import {
   IonItem,
   IonList,
   IonMenuButton,
+  IonRouterLink,
   IonRow,
   IonText,
   IonTitle,
   IonToolbar
 } from '@ionic/angular/standalone';
+import {RouterLink} from "@angular/router";
+import {appPages} from "../services/reference";
+import {ToolbarComponent} from "../components/toolbar/toolbar.component";
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.page.html',
   styleUrls: ['./contact.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, IonText, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonRow, IonList, IonItem, IonButton, IonInput]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, IonText, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonRow, IonList, IonItem, IonButton, IonInput, IonRouterLink, RouterLink, ToolbarComponent]
 })
 export class ContactPage implements OnInit {
 
@@ -38,4 +42,5 @@ export class ContactPage implements OnInit {
   ngOnInit() {
   }
 
+  protected readonly appPages = appPages;
 }

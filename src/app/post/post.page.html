@@ -1,19 +1,16 @@
 <ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons slot="start">
+  <app-toolbar>
       <ion-back-button color="primary" default-href="/posts" text="Retour"></ion-back-button>
-    </ion-buttons>
-    <ion-title color="primary">CASEDESIGN</ion-title>
-  </ion-toolbar>
+  </app-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true">
   <ion-header class="ion-no-border" collapse="condense">
-    <ion-toolbar>
+    <app-toolbar size="large">
       <ion-buttons slot="start">
-        <ion-back-button color="primary" text="Retour"></ion-back-button>
+        <ion-back-button color="primary" default-href="/posts" text="Retour"></ion-back-button>
       </ion-buttons>
-      <ion-title size="large">CASEDESIGN</ion-title>
-    </ion-toolbar>
+    </app-toolbar>
   </ion-header>
   <ion-grid>
     <ion-row class="ion-justify-content-center ion-align-items-center">

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {
+  IonButton,
   IonButtons,
   IonCard,
   IonCardContent,
@@ -13,19 +14,23 @@ import {
   IonGrid,
   IonHeader,
   IonMenuButton,
+  IonRouterLink,
   IonRow,
   IonText,
   IonTitle,
   IonToolbar
 } from '@ionic/angular/standalone';
-import {FooterComponent} from "../footer/footer.component";
+import {FooterComponent} from "../components/footer/footer.component";
+import {RouterLink} from "@angular/router";
+import {appPages} from "../services/reference";
+import {ToolbarComponent} from "../components/toolbar/toolbar.component";
 
 @Component({
   selector: 'app-offers',
   templateUrl: './offers.page.html',
   styleUrls: ['./offers.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, FooterComponent, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonMenuButton, IonRow, IonText, IonCardContent]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, FooterComponent, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonMenuButton, IonRow, IonText, IonCardContent, IonButton, IonRouterLink, RouterLink, ToolbarComponent]
 })
 export class OffersPage implements OnInit {
   offers = [
@@ -59,4 +64,5 @@ export class OffersPage implements OnInit {
   ngOnInit() {
   }
 
+  protected readonly appPages = appPages;
 }
