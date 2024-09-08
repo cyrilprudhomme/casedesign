@@ -57,12 +57,11 @@ export class OffersPage implements OnInit {
         "À l'issue du rendez-vous, je vous livre un document d'analyse du projet avec un visuel 3D pour vous aider à vous projeter et une planche d'ambiance pour votre pièce à décorer avec toutes les références dont vous aurez besoin."
     }
   ]
+  protected readonly appPages = appPages;
 
   constructor() {
   }
 
   ngOnInit() {
   }
-
-  protected readonly appPages = appPages;
 }

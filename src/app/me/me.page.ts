@@ -34,11 +34,11 @@ import {ToolbarComponent} from "../components/toolbar/toolbar.component";
 })
 export class MePage implements OnInit {
 
+  protected readonly appPages = appPages;
+
   constructor() {
   }
 
   ngOnInit() {
   }
-
-  protected readonly appPages = appPages;
 }

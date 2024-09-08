@@ -33,6 +33,7 @@ import {ToolbarComponent} from "../components/toolbar/toolbar.component";
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonNav, FooterComponent, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonMenuButton, IonRow, RouterLink, IonButton, IonRouterLink, ToolbarComponent]
 })
 export class PostsPage implements OnInit {
+  protected readonly appPages = appPages;
   private apiService = inject(ApiService);
   posts = this.apiService.posts
 
@@ -41,6 +42,4 @@ export class PostsPage implements OnInit {
 
   ngOnInit() {
   }
-
-  protected readonly appPages = appPages;
 }

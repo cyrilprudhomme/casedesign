@@ -40,6 +40,7 @@ import {ToolbarComponent} from "../components/toolbar/toolbar.component";
 export class PostPage implements OnInit {
   public folder!: string;
   protected readonly albums = albums;
+  protected readonly appPages = appPages;
   private activatedRoute = inject(ActivatedRoute);
   private apiService = inject(ApiService);
   post = this.apiService.post
@@ -51,6 +52,4 @@ export class PostPage implements OnInit {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
     this.apiService.getPost(this.folder)
   }
-
-  protected readonly appPages = appPages;
 }

@@ -34,14 +34,14 @@ import {ToolbarComponent} from "../components/toolbar/toolbar.component";
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, FooterComponent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonText, IonRouterLink, RouterLink, IonButton, ToolbarComponent]
 })
 export class HomePage implements OnInit {
+  protected readonly appPages = appPages;
   private apiService = inject(ApiService);
   posts = this.apiService.posts
+
   constructor() {
 
   }
 
   ngOnInit() {
   }
-
-  protected readonly appPages = appPages;
 }
