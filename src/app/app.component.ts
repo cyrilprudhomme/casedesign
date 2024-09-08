@@ -14,25 +14,20 @@ import {
   IonNote,
   IonRouterLink,
   IonRouterOutlet,
-  IonSplitPane
+  IonSplitPane,
+  IonToolbar
 } from '@ionic/angular/standalone';
 import {addIcons} from 'ionicons';
 import {
-  archiveOutline,
-  archiveSharp,
-  bookmarkOutline,
-  bookmarkSharp,
-  heartOutline,
-  heartSharp,
+  albumsOutline,
+  albumsSharp,
+  helpOutline,
+  helpSharp,
+  homeOutline,
+  homeSharp,
   logoInstagram,
-  mailOutline,
-  mailSharp,
-  paperPlaneOutline,
-  paperPlaneSharp,
-  trashOutline,
-  trashSharp,
-  warningOutline,
-  warningSharp
+  mailOpenOutline,
+  mailOpenSharp
 } from 'ionicons/icons';
 
 @Component({
@@ -40,33 +35,28 @@ import {
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule, IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterLink, IonRouterOutlet],
+  imports: [RouterLink, RouterLinkActive, CommonModule, IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterLink, IonRouterOutlet, IonToolbar],
 })
 export class AppComponent {
   public appPages = [
-    {title: 'Accueil', url: '/home', icon: 'mail'},
-    {title: 'Qui suis-je ?', url: '/me', icon: 'paper-plane'},
-    {title: 'Mes offres', url: '/offers', icon: 'heart'},
+    {title: 'Accueil', url: '/home', icon: 'home'},
+    {title: 'Qui suis-je ?', url: '/me', icon: 'help'},
+    {title: 'Mes offres', url: '/offers', icon: 'albums'},
+    {title: 'Contact', url: '/contact', icon: 'mail-open'},
   ];
   public labels = [{title: 'Instagram', icon: 'logo-instagram'}];
 
   constructor() {
     addIcons({
       logoInstagram,
-      mailOutline,
-      mailSharp,
-      paperPlaneOutline,
-      paperPlaneSharp,
-      heartOutline,
-      heartSharp,
-      archiveOutline,
-      archiveSharp,
-      trashOutline,
-      trashSharp,
-      warningOutline,
-      warningSharp,
-      bookmarkOutline,
-      bookmarkSharp
+      homeOutline,
+      homeSharp,
+      helpOutline,
+      helpSharp,
+      albumsOutline,
+      albumsSharp,
+      mailOpenOutline,
+      mailOpenSharp
     });
   }
 }

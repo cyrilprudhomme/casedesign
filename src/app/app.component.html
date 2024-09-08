@@ -3,7 +3,11 @@
   <ion-menu contentId="main-content" type="overlay">
     <ion-content>
       <ion-list id="inbox-list">
-        <ion-list-header>CASEDESIGN</ion-list-header>
+        <ion-list-header>
+          <ion-label color="primary">
+            CASEDESIGN
+          </ion-label>
+        </ion-list-header>
         <!--        <ion-note>hi&#64;ionicframework.com</ion-note>-->
 
         <ion-menu-toggle *ngFor="let p of appPages; let i = index" auto-hide="false">
@@ -17,7 +21,8 @@
 
       <ion-list id="labels-list">
         <!--        <ion-list-header>Labels</ion-list-header>-->
-        <ion-item *ngFor="let label of labels" lines="none">
+        <ion-item *ngFor="let label of labels" href="https://www.instagram.com/case_design_deco/" lines="none"
+                  target="_blank">
           <ion-icon [ios]="label.icon" [md]="label.icon" aria-hidden="true" slot="start"></ion-icon>
           <ion-label>{{ label.title }}</ion-label>
         </ion-item>
