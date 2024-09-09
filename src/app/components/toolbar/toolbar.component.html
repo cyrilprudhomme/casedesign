@@ -3,10 +3,10 @@
     <!--    <ion-menu-button color="primary"></ion-menu-button>-->
     <ng-content></ng-content>
   </ion-buttons>
-  <ion-title color="primary" size="{{size}}"><b>CASEDESIGN</b></ion-title>
+  <ion-title color="secondary" size="{{size}}"><b>CASEDESIGN</b></ion-title>
   <ion-buttons slot="end">
     @for (appPage of appPages; track $index) {
-      <ion-button color="primary" routerLink="{{appPage.url}}">{{ appPage.title }}</ion-button>
+      <ion-button color="secondary" routerLink="{{appPage.url}}">{{ appPage.title }}</ion-button>
     }
   </ion-buttons>
 </ion-toolbar>
