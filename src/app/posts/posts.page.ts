@@ -16,6 +16,7 @@ import {
   IonNav,
   IonRouterLink,
   IonRow,
+  IonText,
   IonTitle,
   IonToolbar
 } from '@ionic/angular/standalone';
@@ -30,7 +31,7 @@ import {ToolbarComponent} from "../components/toolbar/toolbar.component";
   templateUrl: './posts.page.html',
   styleUrls: ['./posts.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonNav, FooterComponent, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonMenuButton, IonRow, RouterLink, IonButton, IonRouterLink, ToolbarComponent]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonNav, FooterComponent, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonMenuButton, IonRow, RouterLink, IonButton, IonRouterLink, ToolbarComponent, IonText]
 })
 export class PostsPage implements OnInit {
   protected readonly appPages = appPages;

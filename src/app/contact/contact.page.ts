@@ -26,13 +26,14 @@ import {
 import {RouterLink} from "@angular/router";
 import {appPages} from "../services/reference";
 import {ToolbarComponent} from "../components/toolbar/toolbar.component";
+import {FooterComponent} from "../components/footer/footer.component";
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.page.html',
   styleUrls: ['./contact.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, IonText, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonRow, IonList, IonItem, IonButton, IonInput, IonRouterLink, RouterLink, ToolbarComponent]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, IonText, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonRow, IonList, IonItem, IonButton, IonInput, IonRouterLink, RouterLink, ToolbarComponent, FooterComponent]
 })
 export class ContactPage implements OnInit {
 

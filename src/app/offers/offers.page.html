@@ -7,16 +7,15 @@
     <app-toolbar size="large"></app-toolbar>
   </ion-header>
   <ion-grid>
-    <ion-row class="ion-justify-content-center ion-align-items-center"
-             style="background-color: var(--ion-color-light)">
+    <ion-row class="ion-justify-content-center ion-align-items-center">
       <ion-col class="ion-text-center" size="12" size-sm="8">
-        <ion-text>
+        <ion-text color="primary">
           <h1>A chacun sa formule !</h1>
         </ion-text>
       </ion-col>
     </ion-row>
     <ion-row class="ion-justify-content-center">
-      <ion-col *ngFor="let offer of offers" size="12" size-sm="5">
+      <ion-col *ngFor="let offer of offers" size="12" size-sm="3">
         <ion-card style="min-height: 100%">
           <!--          <img alt="Silhouette of mountains" src="{{offer.image_url}}"/>-->
           <ion-card-header color="primary" style="min-height: 120px">
