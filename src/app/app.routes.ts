@@ -35,4 +35,5 @@ export const routes: Routes = [
     path: 'posts',
     loadComponent: () => import('./posts/posts.page').then(m => m.PostsPage)
   },
+  { path: '',   redirectTo: '/', pathMatch: 'full' }
 ];
