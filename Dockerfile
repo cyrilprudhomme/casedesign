@@ -12,11 +12,11 @@ FROM node:lts-alpine
 LABEL authors="cprudhomme@kodwizz.fr"
 ENV NODE_ENV=production
 WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent
+#COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 COPY app /usr/src/app
+RUN npm install --production --silent
 COPY --from=builder /usr/src/app/www /usr/src/app/public
-#COPY www /usr/src/app/public
+COPY www /usr/src/app/public
 EXPOSE 3000
 RUN chown -R node /usr/src/app
 USER node
