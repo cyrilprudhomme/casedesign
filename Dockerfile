@@ -16,7 +16,7 @@ COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 RUN npm install --production --silent
 COPY app /usr/src/app
 COPY --from=builder /usr/src/app/www /usr/src/app/public
-COPY www /usr/src/app/public
+#COPY www /usr/src/app/public
 EXPOSE 3000
 RUN chown -R node /usr/src/app
 USER node
