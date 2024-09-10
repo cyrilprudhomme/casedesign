@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {appPages} from "../../services/reference";
-import {IonButton, IonButtons, IonMenuButton, IonTitle, IonToolbar} from "@ionic/angular/standalone";
+import {IonButton, IonButtons, IonMenuButton, IonRouterLink, IonTitle, IonToolbar} from "@ionic/angular/standalone";
 import {RouterLink} from "@angular/router";
 
 @Component({
@@ -13,7 +13,8 @@ import {RouterLink} from "@angular/router";
     IonMenuButton,
     IonTitle,
     IonButton,
-    RouterLink
+    RouterLink,
+    IonRouterLink
 
   ],
   standalone: true

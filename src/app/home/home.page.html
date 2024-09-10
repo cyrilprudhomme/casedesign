@@ -1,45 +1,52 @@
 <ion-header [translucent]="true" class="ion-no-border">
-  <app-toolbar></app-toolbar>
+  <app-toolbar>
+
+  </app-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header class="ion-no-border" collapse="condense">
-    <app-toolbar size="large"></app-toolbar>
+    <app-toolbar size="large">
+      <ion-buttons slot="end">
+        @for (appPage of appPages; track $index) {
+          <ion-button color="secondary" routerLink="{{appPage.url}}">{{ appPage.title }}</ion-button>
+        }
+      </ion-buttons>
+    </app-toolbar>
   </ion-header>
   <ion-grid>
     <ion-row class="ion-justify-content-center ion-align-items-center"
-             style="height:50vh;
-             background-image: url('https://casedesign.fr/content/images/size/w2000/2024/04/salon-sejour5--1--1.jpeg');
-             background-repeat: no-repeat;
-             background-position: center;
-             background-size: 100vw">
-    </ion-row>
-    <ion-row class="ion-justify-content-center"
-             style="background-color: var(--ion-color-primary)">
-      <ion-col size="12" size-sm="8" style="padding: 50px 0;">
-        <h1 style="font-size: 3rem">
-          <ion-text color="light">Votre
+             style="
+                   background-size:100vw;
+                   background-image: url('https://casedesign.fr/content/images/size/w2000/2024/04/salon-sejour5--1--1.jpeg');
+                   background-position: center;
+                   background-repeat: no-repeat">
+      <ion-col size="12" size-sm="8" style="vertical-align: center">
+        <h1 style="margin: 20% 0">
+          <ion-text color="light" style="background-color: var(--ion-color-primary)">Votre
             <ion-text color="secondary">Espace</ion-text>
           </ion-text>
           <br>
-          <ion-text color="light">Mon
+          <ion-text color="light" style="background-color: var(--ion-color-primary)">Mon
             <ion-text color="secondary">Expertise</ion-text>
           </ion-text>
           <br>
-          <ion-text color="light">Votre
+          <ion-text color="light" style="background-color: var(--ion-color-primary)">Votre
             <ion-text color="secondary">Style</ion-text>
           </ion-text>
         </h1>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-justify-content-center">
+    <ion-row class="ion-justify-content-center"
+             style="background-color: var(--ion-color-primary)">
       <ion-col class="ion-align-items-center ion-padding-vertical" size="12" size-sm="8">
         <h2>
-          <ion-text color="primary"><u>À la une :</u></ion-text>
+          <ion-text color="light">Coup de coeur :</ion-text>
         </h2>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-justify-content-center">
+    <ion-row class="ion-justify-content-center"
+             style="background-color: var(--ion-color-primary)">
       @for (post of posts(); track $index) {
         @if (post.at_first) {
           <ion-col size="12" size-sm="4">
@@ -57,17 +64,16 @@
         }
       }
     </ion-row>
-    <ion-row class="ion-justify-content-center ion-align-items-center"
-             style="background-color: var(--ion-color-primary)">
+    <ion-row class="ion-justify-content-center ion-align-items-center">
       <ion-col class="ion-text-center" size="12">
-        <ion-text color="light">
+        <ion-text color="secondary">
           <h1>A chacun sa formule !</h1>
         </ion-text>
       </ion-col>
       <!--    </ion-row>
           <ion-row class="ion-justify-content-center">-->
-      <ion-col *ngFor="let offer of offers" size="12" size-sm="3">
-        <ion-card style="min-height: 100%">
+      <ion-col *ngFor="let offer of offers" size="12" size-lg="3" size-md="6" style="height: max-content">
+        <ion-card>
           <!--          <img alt="Silhouette of mountains" src="{{offer.image_url}}"/>-->
           <ion-card-header color="secondary" style="min-height: 120px">
             <ion-card-title>{{ offer.title }}</ion-card-title>
@@ -110,19 +116,19 @@
     </ion-row>
     <ion-row class="ion-justify-content-center">
       <ion-col size="12" size-sm="5">
-        <ion-card>
+        <ion-card color="secondary">
           <ion-card-header>
             <ion-card-title>Contact</ion-card-title>
           </ion-card-header>
-          <ion-card-content>
-            <ion-list>
-              <ion-item>
+          <ion-card-content style="background-color: var(--ion-color-secondary)">
+            <ion-list style="background-color: var(--ion-color-secondary)">
+              <ion-item color="secondary">
                 <ion-input label="Email" labelPlacement="floating" placeholder="Saisissez votre e-mail"></ion-input>
               </ion-item>
-              <ion-item>
+              <ion-item color="secondary">
                 <ion-input label="Message" labelPlacement="floating" placeholder="Saisissez votre message"></ion-input>
               </ion-item>
-              <ion-button>
+              <ion-button color="primary" expand="block">
                 Envoyer
               </ion-button>
             </ion-list>

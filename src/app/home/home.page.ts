@@ -1,5 +1,5 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {
   IonButton,
@@ -13,6 +13,7 @@ import {
   IonContent,
   IonGrid,
   IonHeader,
+  IonImg,
   IonInput,
   IonItem,
   IonList,
@@ -34,7 +35,7 @@ import {ToolbarComponent} from "../components/toolbar/toolbar.component";
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, FooterComponent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonText, IonRouterLink, RouterLink, IonButton, ToolbarComponent, IonInput, IonItem, IonList]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, FooterComponent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonText, IonRouterLink, RouterLink, IonButton, ToolbarComponent, IonInput, IonItem, IonList, IonImg, NgOptimizedImage]
 })
 export class HomePage implements OnInit {
   protected readonly appPages = appPages;

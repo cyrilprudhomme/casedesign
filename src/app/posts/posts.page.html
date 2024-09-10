@@ -1,10 +1,18 @@
 <ion-header [translucent]="true" class="ion-no-border">
-  <app-toolbar></app-toolbar>
+  <app-toolbar>
+
+  </app-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header class="ion-no-border" collapse="condense">
-    <app-toolbar size="large"></app-toolbar>
+    <app-toolbar size="large">
+      <ion-buttons slot="end">
+        @for (appPage of appPages; track $index) {
+          <ion-button color="secondary" routerLink="{{appPage.url}}">{{ appPage.title }}</ion-button>
+        }
+      </ion-buttons>
+    </app-toolbar>
   </ion-header>
   <ion-grid>
     <ion-row class="ion-justify-content-center">
