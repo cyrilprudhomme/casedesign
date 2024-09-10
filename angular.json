@@ -33,7 +33,7 @@
                 "input": "src/assets",
                 "output": "assets"
               },
-              "public/manifest.webmanifest"
+              "src/manifest.webmanifest"
             ],
             "styles": ["src/global.scss", "src/theme/variables.scss"],
             "scripts": [],
