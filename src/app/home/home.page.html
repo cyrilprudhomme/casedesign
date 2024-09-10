@@ -16,7 +16,7 @@
     </ion-row>
     <ion-row class="ion-justify-content-center"
              style="background-color: var(--ion-color-primary)">
-      <ion-col size="12" size-sm="8" style="  padding: 50px 0;">
+      <ion-col size="12" size-sm="8" style="padding: 50px 0;">
         <h1 style="font-size: 3rem">
           <ion-text color="light">Votre
             <ion-text color="secondary">Espace</ion-text>
@@ -56,6 +56,79 @@
           </ion-col>
         }
       }
+    </ion-row>
+    <ion-row class="ion-justify-content-center ion-align-items-center"
+             style="background-color: var(--ion-color-primary)">
+      <ion-col class="ion-text-center" size="12">
+        <ion-text color="light">
+          <h1>A chacun sa formule !</h1>
+        </ion-text>
+      </ion-col>
+      <!--    </ion-row>
+          <ion-row class="ion-justify-content-center">-->
+      <ion-col *ngFor="let offer of offers" size="12" size-sm="3">
+        <ion-card style="min-height: 100%">
+          <!--          <img alt="Silhouette of mountains" src="{{offer.image_url}}"/>-->
+          <ion-card-header color="secondary" style="min-height: 120px">
+            <ion-card-title>{{ offer.title }}</ion-card-title>
+            <ion-card-subtitle>{{ offer.subtitle }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content style="background-color: var(--ion-color-secondary); color: var(--ion-color-light)">
+            {{ offer.body }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center ion-align-items-center"
+             style="background-color: var(--ion-color-primary)">
+      <ion-col class="ion-text-center" size="12" size-sm="8" style="  padding: 50px 0;">
+        <h1 style="font-size: 4em">
+          <ion-text color="light">Et
+            <ion-text color="secondary">toi ?</ion-text>
+          </ion-text>
+        </h1>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col class="ion-text-center" size="12" size-sm="8">
+        <ion-text>
+          <h2>Besoin d'
+            <ion-text color="primary">un projet déco ?</ion-text>
+          </h2>
+          <h2>De
+            <ion-text color="primary"> nouvelle idée ?</ion-text>
+          </h2>
+          <h2>De
+            <ion-text color="primary"> nouveauté ?</ion-text>
+          </h2>
+          <br><br>
+          Laisse moi un message !
+          <br>
+          Je serais ravie de t'accompagner dans cette aventure.
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-sm="5">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Contact</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-input label="Email" labelPlacement="floating" placeholder="Saisissez votre e-mail"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input label="Message" labelPlacement="floating" placeholder="Saisissez votre message"></ion-input>
+              </ion-item>
+              <ion-button>
+                Envoyer
+              </ion-button>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
