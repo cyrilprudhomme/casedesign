@@ -16,7 +16,7 @@ WORKDIR /usr/src/app
 COPY app /usr/src/app
 RUN npm install --production --silent
 COPY --from=builder /usr/src/app/www /usr/src/app/public
-COPY www /usr/src/app/public
+#COPY www /usr/src/app/public
 EXPOSE 3000
 RUN chown -R node /usr/src/app
 USER node
