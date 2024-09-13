@@ -18,5 +18,4 @@ app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 // app.use(express.static('public'));
-
 module.exports = app;
