@@ -9,7 +9,7 @@ const bdd_password = process.env.MONGODB_PASSWORD || 'example';
 const bdd_hostname = process.env.MONGODB_HOSTNAME || 'localhost';
 const bdd_port = process.env.MONGODB_PORT || '27017';
 // Database Name
-const dbName = process.env.BDD_NAME || 'app';
+const dbName = process.env.MONGODB_DB_NAME || 'app';
 const url = `mongodb://${bdd_username}:${bdd_password}@${bdd_hostname}:${bdd_port}`;
 const client = new MongoClient(url);
 
