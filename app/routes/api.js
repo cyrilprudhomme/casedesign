@@ -4,10 +4,14 @@ const router = express.Router();
 
 const { MongoClient } = require('mongodb');
 // Connection URL
-const url = 'mongodb://root:example@localhost:27017';
-const client = new MongoClient(url);
+const bdd_username = process.env.MONGODB_USERNAME || 'root';
+const bdd_password = process.env.MONGODB_PASSWORD || 'example';
+const bdd_hostname = process.env.MONGODB_HOSTNAME || 'localhost';
+const bdd_port = process.env.MONGODB_PORT || '27017';
 // Database Name
-const dbName = 'app';
+const dbName = process.env.BDD_NAME || 'app';
+const url = `mongodb://${bdd_username}:${bdd_password}@${bdd_hostname}:${bdd_port}`;
+const client = new MongoClient(url);
 
 
 /* GET users listing. */
