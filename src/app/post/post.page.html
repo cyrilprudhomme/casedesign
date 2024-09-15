@@ -25,9 +25,10 @@
     </ion-row>
     <ion-row class="ion-justify-content-center">
       <ion-col size="12" size-sm="8">
-        @if (post().images) {
+        @if (post().albums[0].images[0]) {
           <ngb-carousel>
-            @for (image of post().images; track $index) {
+            @for (album of post().albums; track $index) {
+              @for (image of album.images; track $index) {
               <ng-template ngbSlide>
                 <div class="picsum-img-wrapper">
                   <img [src]="image.url" alt="{{ image.description }}"/>
@@ -37,6 +38,7 @@
                   <p>{{ image.subtitle }}</p>
                 </div>
               </ng-template>
+            }
             }
           </ngb-carousel>
         }

@@ -58,7 +58,7 @@
         @if (post.at_first) {
           <ion-col size="12" size-sm="4">
             <ion-card [routerLink]="['/post/'+$index]">
-              <img alt="Silhouette of mountains" src="{{post.images[0].url}}"/>
+              <img alt="Silhouette of mountains" src="{{post.albums[0].images[0].url}}"/>
               <ion-card-header>
                 <ion-card-title>{{ post.title }}</ion-card-title>
                 <ion-card-subtitle>{{ post.subtitle }}</ion-card-subtitle>
