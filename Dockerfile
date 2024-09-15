@@ -11,6 +11,11 @@ RUN npm run build
 FROM node:lts-alpine
 LABEL authors="cprudhomme@kodwizz.fr"
 ENV NODE_ENV=production
+ENV MONGODB_USERNAME='root'
+ENV MONGODB_PASSWORD='example'
+ENV MONGODB_HOSTNAME='localhost'
+ENV MONGODB_PORT='27017'
+ENV BDD_NAME='app'
 WORKDIR /usr/src/app
 #COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 COPY app /usr/src/app
