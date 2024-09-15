@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "short_name": "app",
+  "name": "casedesign",
+  "short_name": "casedesign",
   "theme_color": "transparent",
   "background_color": "transparent",
   "display": "standalone",

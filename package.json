@@ -1,8 +1,8 @@
 {
   "name": "casedesign",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "kodwizz",
+  "homepage": "https://casedesign.fr/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
