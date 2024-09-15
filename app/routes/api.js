@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 
 const { MongoClient } = require('mongodb');
@@ -10,7 +11,7 @@ const dbName = 'app';
 
 
 /* GET users listing. */
-router.get('/', async function (req, res, next) {
+router.get('/albums', async function (req, res, next) {
 // Use connect method to connect to the server
   await client.connect();
   console.log('Connected successfully to server');

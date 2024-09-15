@@ -6,8 +6,9 @@ import {IonicRouteStrategy, provideIonicAngular} from '@ionic/angular/standalone
 
 import {routes} from './app/app.routes';
 import {AppComponent} from './app/app.component';
-import { isDevMode } from '@angular/core';
-import { provideServiceWorker } from '@angular/service-worker';
+import {isDevMode} from '@angular/core';
+import {provideServiceWorker} from '@angular/service-worker';
+import {provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -17,5 +18,6 @@ bootstrapApplication(AppComponent, {
             enabled: !isDevMode(),
             registrationStrategy: 'registerWhenStable:30000'
           }),
+    provideHttpClient(withInterceptorsFromDi()),
   ],
 });
